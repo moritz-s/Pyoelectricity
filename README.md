@@ -5,7 +5,7 @@ This is a collection of python scripts as used in our publication
 _Annihilation of action potentials induces functional electrical coupling between neurons_
 
 The data files (and a mirror of this repository) are deposited at
-[osf.io/k5xym/](https://osf.io/k5xym/).
+[osf.io/duyn3/](https://osf.io/duyn3/).
 
 ## Dependencies
 The following packages need to be installed:
