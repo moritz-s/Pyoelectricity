@@ -1,6 +1,6 @@
 # Pyoelectricity
 
-This is a collection of python scripts as used in our publication
+This is a collection of python scripts as used in the publication
 
 _Annihilation of action potentials induces functional electrical coupling between neurons_
 
