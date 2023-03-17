@@ -9,13 +9,13 @@ The data files (and a mirror of this repository) are deposited at
 
 ## Dependencies
 The following packages need to be installed:
-* Brian2
-* scipy
-* tables
-* tqdm
-* matplotlib
-* jupyter
-* pandas
+- Brian2
+- scipy
+- tables
+- tqdm
+- matplotlib
+- jupyter
+- pandas
 
 The environment may be set up with poetry 
 [python-poetry.org](python-poetry.org)
