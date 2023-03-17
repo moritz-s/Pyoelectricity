@@ -23,13 +23,17 @@ The environment may be set up with poetry
 using _pyproject.toml_, or with 
 [conda](anaconda.com) using the _environment.yml_ file.
 
-## Content of the repository
+## Content
 
-__data__ Folder containing complete experimental data.
+__data__ 
+
+Folder containing complete experimental data.
    The data files are numpy _.npz_ files.
    These files are analyzed in _ExperimentAnalysis.ipynb_.
 
-__Pyoelectricity__ Github repository with source code.
+__Pyoelectricity__ 
+
+Github repository with source code.
 
 - _ExperimentAnalysis.ipynb_ Complete code to analyse the experimental data.
 
