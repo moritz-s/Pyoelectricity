@@ -14,7 +14,7 @@ The following packages need to be installed:
 * jupyter
 * pandas
 
-A working environment can be set up with poetry 
+The environment may be set up with poetry 
 [python-poetry.org](python-poetry.org)
 _pyproject.toml_ file, or with 
 [conda](anaconda.com) using the _environment.yml_ file.
