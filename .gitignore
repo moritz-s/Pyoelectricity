@@ -2,6 +2,11 @@
 #
 data/
 
+# Figures
+Fig*.pdf
+Fig*.svg
+SI*.pdf
+
 # swp files
 *.swp
 
@@ -9,6 +14,7 @@ data/
 __pycache__/
 *.py[cod]
 *$py.class
+-.o
 
 # C extensions
 *.so
