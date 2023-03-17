@@ -1,20 +1,22 @@
 #!/usr/bin/env python
 # coding: utf-8
-""" This script calculates ephaptic interactions at synapses.
-"""
+""" Examples for ephaptic interactions at end-end synapses. """
 
 import os
 from pathlib import Path
 
 import tables as tb
 import brian2 as br
-from brian2 import (np, second, ms, us, meter, cm, cmetre, mm, um, uamp, msiemens, siemens, ohm,
-                    ufarad, farad)
+from brian2 import (np, second, ms, us, meter, cm, cmetre, mm, um, 
+                    uamp, msiemens, siemens, ohm, ufarad, farad)
 
 import pyoelectricity as pel
+
+# Use all but <N> CPUs for computation
 # pel.SPARE_CPUS = 0
 
 SAVE_PATH = 'simulation/end-end/'
+
 
 ######################################
 # Parameters defining the morphology #
@@ -35,6 +37,7 @@ GLOBAL_SOURCE_TARGET_GAP = 10*br.nmeter
 #
 GLOBAL_N = 2000 # target is 1/4
 GLOBAL_LABEL = 'ee-2k-.1us-.3mm'
+
 
 ########################
 # Extracellular medium #
@@ -135,6 +138,7 @@ models = {
     'spine-hh': (pel.make_hh_neuron, {}),
 }
 
+
 ###################################
 # Run all models and morphologies #
 ###################################
@@ -171,9 +175,7 @@ for model_name, (generate_model, model_kws) in models.items():
         V_ext_t, V_ext_v = pel.calculate_V_e_Parallel(
             source_recording,
             target=target_straight_morpho,
-            # 1/(100*ohm*meter) extracellular conductivity
-            # from: https://www.pnas.org/content/105/46/18047
-            sigma=SIGMA_EXT) #0.01 * siemens / meter)
+            sigma=SIGMA_EXT)
 
         for target_type_lbl, target_morpho in [
             ('s', target_straight_morpho),

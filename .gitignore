@@ -1,6 +1,8 @@
 # Data directory
-#
 data/
+
+# Simulation results directory
+simulation/
 
 # Figures
 Fig*.pdf
