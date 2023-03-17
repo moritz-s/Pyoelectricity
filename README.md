@@ -14,8 +14,15 @@ The following packages need to be installed:
 * jupyter
 * pandas
 
-A working environment can be set up with poetry (%\texttt
-{python-poetry.org}) using the \texttt{pyproject.toml} file, or with conda 
+A working environment can be set up with poetry 
+(python-poetry.org)
+AHA
+[python-poetry.org]
+OHO
+[python-poetry.org]
+(python-poetry.org)
+
+using the \texttt{pyproject.toml} file, or with conda 
 (\texttt{anaconda.com}) using the \texttt{environment.yml} file.
 The repository contains the following files:
 
