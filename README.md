@@ -19,8 +19,7 @@ A working environment can be set up with poetry
 AHA
 [python-poetry.org]
 OHO
-[python-poetry.org]
-(python-poetry.org)
+[python-poetry.org](python-poetry.org)
 
 using the \texttt{pyproject.toml} file, or with conda 
 (\texttt{anaconda.com}) using the \texttt{environment.yml} file.
