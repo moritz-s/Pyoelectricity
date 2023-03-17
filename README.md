@@ -9,6 +9,7 @@ The data files (and a mirror of this repository) are deposited at
 
 ## Dependencies
 The following packages need to be installed:
+
 - Brian2
 - scipy
 - tables
