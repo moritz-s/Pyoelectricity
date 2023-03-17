@@ -4,6 +4,9 @@ This is a collection of python scripts as used in our publication
 
 _Annihilation of action potentials induces functional electrical coupling between neurons_
 
+The data files (and a mirror of this repository) are deposited at
+[osf.io/k5xym/](https://osf.io/k5xym/).
+
 ## Dependencies
 The following packages need to be installed:
 * Brian2
@@ -16,7 +19,7 @@ The following packages need to be installed:
 
 The environment may be set up with poetry 
 [python-poetry.org](python-poetry.org)
-_pyproject.toml_ file, or with 
+using _pyproject.toml_, or with 
 [conda](anaconda.com) using the _environment.yml_ file.
 
 ## Content of the repository
