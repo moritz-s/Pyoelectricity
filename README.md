@@ -33,18 +33,19 @@ Folder containing complete experimental data.
 
 __Pyoelectricity__ 
 
-Github repository with source code.
+Github repository with source code, including the files:
 
-- _ExperimentAnalysis.ipynb_ Complete code to analyse the experimental data.
+- _ExperimentAnalysis.ipynb_ Analysis of experimental data.
 
 - _pyoelectricity.py_ The central file that contains models and functions.
 
 - _Example1.ipynb_ A simple example demonstrating the use of our script to calculate ephaptic interactions.
 
-- _test-extField.ipynb_ Test cases for the impact of an extracellular field (generalized activating function): 
+- _test-extField.ipynb_ Test cases for the impact of an extracellular field via pyoelectricity.py (_generalized activating function_): 
 
 - _end-end.py_ Calculates the examples of end-end synapses.
 - _end-end-plots.ipynb_ Generates the figures for end-end synapses.
 - _end-shaft.py_ Calculates the examples of end-shaft synapses.
 - _end-shaft-plots.ipynb_ Generates the figures for end-shaft synapses.
 
+- _ActivatingFunction.ipynb_ A plain integration of an extracellular potential in brian (_generalized activating function_).
