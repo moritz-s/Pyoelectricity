@@ -269,7 +269,7 @@ def get_velocity(M, make_plots=True, is_collision=True, print_values=True,
     else:
         ix1 = br.argmin(midline_deviation)
         x1 = x_m[mask][ix1]
-        lambda_c = (x_m.max()-x1)*2
+        lambda_c = (x_m.max()-x1)
 
     if make_plots:
         # Plotting
