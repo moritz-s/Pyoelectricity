@@ -7,6 +7,12 @@ _Annihilation of action potentials induces functional electrical coupling betwee
 The data files (and a mirror of this repository) are deposited at
 [osf.io/duyn3/](https://osf.io/duyn3/).
 
+From linear cable equations, as implemented in the Tasaki-Matsumoto model, we
+extract the only two neuron-specific parameters (the inner or axonal
+resistivity ri and the capacity of the membrane cm), which then allows to
+predict the extracellular spatio-temporal current pattern when APs annihilate.
+This is used to calculate the electric coupling with neighboring neurons.
+
 ## Dependencies
 The following packages need to be installed:
 
