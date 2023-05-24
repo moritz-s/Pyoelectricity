@@ -1,17 +1,18 @@
 # Pyoelectricity
 
-This is a collection of python scripts as used in the publication
+This is the source code used in the publication
+_Annihilation of action potentials induces functional electrical coupling between neurons_.
+The data files are deposited at
+[osf.io/duyn3/](https://osf.io/duyn3/)
+and are accompanied by a mirror of the GitHub repository
+[moritz-s/Pyoelectricity](https://github.com/moritz-s/Pyoelectricity).
 
-_Annihilation of action potentials induces functional electrical coupling between neurons_
-
-The data files (and a mirror of this repository) are deposited at
-[osf.io/duyn3/](https://osf.io/duyn3/).
-
-From linear cable equations, as implemented in the Tasaki-Matsumoto model, we
-extract the only two neuron-specific parameters (the inner or axonal
-resistivity ri and the capacity of the membrane cm), which then allows to
-predict the extracellular spatio-temporal current pattern when APs annihilate.
-This is used to calculate the electric coupling with neighboring neurons.
+We extract the velocity and __length__ of Action Potentials (AP) by analysing AP collision experiments.
+(in _ExperimentAnalysis.ipynb_)
+These parameters determine the Tasaki-Matsumoto model and verify it's behaviour upon collision.
+The TM model can predict the extracellular current pattern when APs annihilate.
+This enables to calculate the electric coupling with neighboring neurons, e.g. at synapses.
+(in _end-*_ skripts)
 
 ## Dependencies
 The following packages need to be installed:
@@ -29,19 +30,9 @@ The environment may be set up with poetry
 using _pyproject.toml_, or with 
 [conda](anaconda.com) using the _environment.yml_ file.
 
-## Content
+## Source code files
 
-__data__ 
-
-Folder containing complete experimental data.
-   The data files are numpy _.npz_ files.
-   These files are analyzed in _ExperimentAnalysis.ipynb_.
-
-__Pyoelectricity__ 
-
-Github repository with source code, including the files:
-
-- _ExperimentAnalysis.ipynb_ Analysis of experimental data.
+- _ExperimentAnalysis.ipynb_ Analysis of experimental data. (_data_ folder is deposited in OSF Storage)
 
 - _pyoelectricity.py_ The central file that contains models and functions.
 
