@@ -1,7 +1,12 @@
 # Pyoelectricity
 
+
+<p align="center">
+  <img src="./collision1.png"  width="50%" height="50%">
+</p>
+
 This is the source code used in the publication
-_Annihilation of action potentials induces functional electrical coupling between neurons_.
+_Annihilation of action potentials induces functional electrical coupling between neurons_. (The figure above shows a collision of Action Potentials)
 
 ---
 **Please cite as:**
