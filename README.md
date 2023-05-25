@@ -2,6 +2,13 @@
 
 This is the source code used in the publication
 _Annihilation of action potentials induces functional electrical coupling between neurons_.
+
+---
+**Please cite as:**
+Schloetter, Moritz, Georg U. Maret, and Christoph J. Kleineidam. “Annihilation of Action Potentials Induces Electrical Coupling between Neurons.” bioRxiv, May 24, 2023. https://doi.org/10.1101/2023.05.24.542064. (preprint, in review with eLife)
+
+---
+
 The data files are deposited at
 [osf.io/duyn3/](https://osf.io/duyn3/)
 and are accompanied by a mirror of the GitHub repository
