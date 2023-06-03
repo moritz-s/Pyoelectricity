@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="./collision1.png"  width="50%" height="50%">
+  <img src="https://raw.githubusercontent.com/moritz-s/Pyoelectricity/main/collision1.png"  width="50%" height="50%">
 </p>
 
 This is the source code used in the publication
