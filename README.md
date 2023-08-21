@@ -10,7 +10,9 @@ _Annihilation of action potentials induces functional electrical coupling betwee
 
 ---
 **Please cite as:**
-Schloetter, Moritz, Georg U. Maret, and Christoph J. Kleineidam. “Annihilation of Action Potentials Induces Electrical Coupling between Neurons.” bioRxiv, May 24, 2023. https://doi.org/10.1101/2023.05.24.542064. (preprint, in review with eLife)
+
+Schlötter Moritz, Maret Georg, Kleineidam Christoph J. (2023) Annihilation of action potentials induces electrical coupling between neurons eLife 12:RP88335
+https://doi.org/10.7554/eLife.88335.1
 
 ---
 
