@@ -1,9 +1,9 @@
 # Pyoelectricity
 
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/moritz-s/Pyoelectricity/main/collision1.png"  width="50%" height="50%">
-</p>
+<img align="center"
+     src="https://raw.githubusercontent.com/moritz-s/Pyoelectricity/main/collision1.png"
+     alt="Collision of Action Potentials"
+     width="50%" />
 
 This is the source code used in the publication
 _Annihilation of action potentials induces functional electrical coupling between neurons_. (The figure above shows a collision of Action Potentials)
