@@ -36,6 +36,7 @@ def make_tasaki_neuron(morpho,
             I : amp (point current)          # current injection
             g : siemens/meter**2             # transmembrane conductivity
             v0 : volt                        # transmembrane equilibrium potential
+            v_threshold : volt               # threshold offset potential
             Im = g * (v0-v) : amp/meter**2   # resistive transmembrane current
         '''
     excitation = '''
@@ -47,15 +48,16 @@ def make_tasaki_neuron(morpho,
                            model=eqs,
                            Cm=Cm,
                            Ri=Ri,
-                           threshold='v>(-50*mV)',
+                           threshold='v>(v0+v_threshold)',
                            reset=excitation,
                            method=PDE_INTEGRATION_METHOD)
 
     neuron.namespace["gstar"] = gstar
 
-    # Initial vlues
+    # Initial values
     neuron.v = -100*mV
     neuron.v0 = -100*mV
+    neuron.v_threshold = 50.0*mV
     neuron.g = gstar*g_leak_factor
 
     return neuron
@@ -86,10 +88,12 @@ def make_repolarizing_neuron(morpho,  # gstar=9.79 * msiemens / cm**2,
 
     """ Creates a repolarizing neuron (based on Tasaki-Matsumoto, but extended) """
 
+            #gstar : siemens/meter**2
     eqs = '''
             I : amp (point current)
             g = gL + (1-state_parameter**repol_exponent_g)*(gstar) : siemens/meter**2
             Im = g * (v0-v) : amp/meter**2
+            v_threshold : volt               # threshold offset potential
 
             dstate_parameter/dt = (1-state_parameter)/trelax :1
             v0 = -100*mV * state_parameter**repol_exponent_v : volt
@@ -101,19 +105,21 @@ def make_repolarizing_neuron(morpho,  # gstar=9.79 * msiemens / cm**2,
                            model=eqs,
                            Cm=Cm,
                            Ri=Ri,
-                           threshold='v>(v0+50*mV)',
+                           threshold='v>(v0+v_threshold)',
+                           #threshold='v>(v0+50*mV)',
                            reset=excitation,
                            method=PDE_INTEGRATION_METHOD)
 
     # global constants for the whole fiber
-    neuron.namespace["gstar"] = gstar
     neuron.namespace["repol_exponent_v"] = repol_exponent_v
     neuron.namespace["repol_exponent_g"] = repol_exponent_g
     neuron.namespace["trelax"] = trelax
     neuron.namespace["gL"] = gstar * g_leak_factor
+    neuron.namespace["gstar"] = gstar
 
     # Initial values
     neuron.v = -100 * mV
+    neuron.v_threshold = 50.0*mV
     neuron.state_parameter = 1  # -100 * mV
 
     return neuron
@@ -129,6 +135,8 @@ def make_hh_neuron(morpho,
     eqs = '''
     Im = gl * (El-v) + gNa * m**3 * h * (ENa-v) + gK * n**4 * (EK-v) : amp/meter**2
     I : amp (point current)
+    gNa : siemens/meter**2
+    gK : siemens/meter**2
     dm/dt = alpham * (1.0-m) - betam * m : 1
     dn/dt = alphan * (1.0-n) - betan * n : 1
     dh/dt = alphah * (1.0-h) - betah * h : 1
@@ -149,10 +157,13 @@ def make_hh_neuron(morpho,
     neuron.namespace["ENa"] = 115 * mV
     neuron.namespace["El"] = 10.613 * mV
     neuron.namespace["EK"] = -12 * mV
-    neuron.namespace["gNa"] = g_factor * 120 * msiemens / cm**2
-    neuron.namespace["gK"] = g_factor * 36 * msiemens / cm**2
+    #neuron.namespace["gNa"] = g_factor * 120 * msiemens / cm**2
+    #neuron.namespace["gK"] = g_factor * 36 * msiemens / cm**2
     neuron.namespace["gl"] = 0.3 * msiemens / cm**2
 
+    neuron.gNa = g_factor * 120 * msiemens / cm**2
+    neuron.gK = g_factor * 36 * msiemens / cm**2
+    
     # Initial values
     neuron.v = 0 * mV
 
@@ -341,7 +352,7 @@ def transfer_impedance_electrode(source_x,
                                 electrode_x,
                                 electrode_radius=0.2 * mm,
                                 electrode_separation = 5*mm,
-                                crossection_area=np.pi * (0.5*mm)**2,
+                                crossection_area=np.pi * (0.25*mm)**2,
                                 sigma=0.3 * siemens / meter):
     pos = source_x - electrode_x
     i_g0 = np.argmin(abs(pos + electrode_separation - electrode_radius))

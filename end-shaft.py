@@ -15,7 +15,6 @@ save_path="simulation/"
 ###########################################################
 # 1. Define functions to generate and save multiple cases #
 ###########################################################
-
 # This function generates (brian) neuron objects for all models
 def make_all_models_from_kws(model_kws, gstar, lbl):
     """Creates all model for a given morphology and returns a named dict,
@@ -199,8 +198,10 @@ def purkinje(
         )
 
 
+# Done
 # purkinje(lbl='1um_500', diameter=1*um, N=500)
 purkinje(lbl='1um_2k', diameter=1*um, N=2000)
 # purkinje(lbl='1um_5k', diameter=1*um, N=5000)
+
 # purkinje(lbl='1um_500_g1200', gstar=1200*siemens/meter**2, diameter=1*um, N=500)
 # purkinje(lbl='1um_2k_g1200', gstar=1200*siemens/meter**2, diameter=1*um, N=2000)
