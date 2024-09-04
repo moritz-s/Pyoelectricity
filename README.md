@@ -1,12 +1,11 @@
 # Pyoelectricity
 
-<img align="center"
-     src="https://raw.githubusercontent.com/moritz-s/Pyoelectricity/main/collision1.png"
-     alt="Collision of Action Potentials"
-     width="50%" />
+![Recording of colliding APs in earthworm][1]
+
+  [1]: https://raw.githubusercontent.com/moritz-s/Pyoelectricity/main/collision1.png
 
 This is the source code used in the publication
-_Annihilation of action potentials induces functional electrical coupling between neurons_. (The figure above shows a collision of Action Potentials)
+_Annihilation of action potentials induces functional electrical coupling between neurons_. (The figure above shows recordings of colliding Action Potentials in the earthworm ventral nerve chord.)
 
 ---
 **Please cite as:**
@@ -53,6 +52,8 @@ using _pyproject.toml_, or with
 - _Example1.ipynb_ A simple example demonstrating the use of our script to calculate ephaptic interactions.
 
 - _test-extField.ipynb_ Test cases for the impact of an extracellular field via pyoelectricity.py (_generalized activating function_): 
+
+- _Pinceau.ipynb_ Calculation and plot of the pinceau synapse.
 
 - _end-end.py_ Calculates the examples of end-end synapses.
 - _end-end-plots.ipynb_ Generates the figures for end-end synapses.
