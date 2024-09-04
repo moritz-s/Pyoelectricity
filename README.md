@@ -2,7 +2,7 @@
 
 ![Recording of colliding APs in earthworm][1]
 
-  [1]: https://raw.githubusercontent.com/moritz-s/Pyoelectricity/main/collision1.png
+  [1]: https://raw.githubusercontent.com/moritz-s/Pyoelectricity/main/collision1-b.png
 
 This is the source code used in the publication
 _Annihilation of action potentials induces functional electrical coupling between neurons_. (The figure above shows recordings of colliding Action Potentials in the earthworm ventral nerve chord.)
