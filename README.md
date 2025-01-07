@@ -45,13 +45,17 @@ using _pyproject.toml_, or with
 
 ## Source code files
 
+- _test-ExternalField.ipynb_ Test cases for the impact of an extracellular field via pyoelectricity.py: 
+- _standalone-ExternalField.ipynb_ A standalone implementation of extracellular fields in brian (_generalized activating function_).
+
+## TODO Source code files (old)
+
 - _ExperimentAnalysis.ipynb_ Analysis of experimental data. (_data_ folder is deposited in OSF Storage)
 
 - _pyoelectricity.py_ The central file that contains models and functions.
 
 - _Example1.ipynb_ A simple example demonstrating the use of our script to calculate ephaptic interactions.
 
-- _test-extField.ipynb_ Test cases for the impact of an extracellular field via pyoelectricity.py (_generalized activating function_): 
 
 - _Pinceau.ipynb_ Calculation and plot of the pinceau synapse.
 
@@ -60,4 +64,3 @@ using _pyproject.toml_, or with
 - _end-shaft.py_ Calculates the examples of end-shaft synapses.
 - _end-shaft-plots.ipynb_ Generates the figures for end-shaft synapses.
 
-- _ActivatingFunction.ipynb_ A plain integration of an extracellular potential in brian (_generalized activating function_).
