@@ -11,7 +11,6 @@ import brian2 as br
 from brian2 import np
 from brian2 import meter, siemens, ohm, cm, farad, uF, mV, ms, us, uA, msiemens, mA, amp, mm, mvolt, usecond, msecond
 
-from tqdm import tqdm
 import tables as tb
 
 from tqdm.contrib.concurrent import thread_map
